@@ -7,9 +7,9 @@ RUN npm install
 # Copy source code
 WORKDIR /app
 
-COPY packages.json .
+COPY package.json .
 
 COPY . .
 
 # Start command
-CMD ["nmp", "run", "start"]
+CMD ["npm", "run", "start"]
