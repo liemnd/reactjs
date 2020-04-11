@@ -1,13 +1,16 @@
 # Image base
 FROM node:alpine
 
+# Set working directory 
+WORKDIR /app
+
+# Copy package.json file
+COPY package.json .
+
 # Install dependencies packages
 RUN npm install
 
 # Copy source code
-WORKDIR /app
-
-COPY package.json .
 
 COPY . .
 
